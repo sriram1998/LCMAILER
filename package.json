@@ -1,0 +1,15 @@
+{
+  "name": "qnsmailer",
+  "version": "1.0.0",
+  "description": "LC qns mailer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "read-excel-file": "^5.2.28"
+  }
+}
