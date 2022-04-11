@@ -1,6 +1,5 @@
 {
     "concepts": ["array","string","hash-table","dynamic-programming","math","depth-first-search","sorting","greedy","breadth-first-search","tree","binary-search","matrix","binary-tree","two-pointers","bit-manipulation","stack","heap-priority-queue","graph"],
-    "difficulty": ["Easy", "Medium", "Hard"],
-    "preferredDifficulty": [0, 1], 
+    "difficulty": ["Easy", "Medium"],
     "DL":["sriramvenkat98@gmail.com"]
 }
