@@ -31,15 +31,3 @@ async function insertDataIntoDB(){
 }
 
 insertDataIntoDB();
-
-
-
-
-
-
-
-
-
-
-
-
