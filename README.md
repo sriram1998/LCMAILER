@@ -7,4 +7,4 @@ Initial Setup (for now):
 - For GMAIL password an app password must be generated from google account (https://support.google.com/accounts/answer/185833?p=InvalidSecondFactor)
 - Run npm run setup
 - Run npm start
-- Difficulty range and concpets can be set in app.config.js
+- Difficulty range and concepts can be set in app.config.js
