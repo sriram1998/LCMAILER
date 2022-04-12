@@ -9,11 +9,11 @@ var conn = mysql.createConnection({
 });
 
 var sqlCommand = `
-CREATE DATABASE lcproblemset;
+CREATE DATABASE IF NOT EXISTS lcproblemset;
 
 USE lcproblemset;
 
-CREATE TABLE problems (
+CREATE TABLE IF NOT EXISTS problems (
     id int(11) NOT NULL auto_increment,
     title varchar(500) NOT NULL,
     difficulty varchar(20) NOT NULL,
@@ -23,12 +23,16 @@ CREATE TABLE problems (
     PRIMARY KEY (id)
 );
 `
-
-conn.query(sqlCommand, (err) => {
-    if(err){
-        console.log("Database and table creation failed ", err);
-    }
-    else{
-        console.log("Connection to DB successful and table created");
-    }
-});
+try {
+    conn.query(sqlCommand, (err) => {
+        if (err) {
+            console.log("Database and table creation failed ", err);
+        }
+        else {
+            console.log("Connection to DB successful and table created");
+        }
+    });
+}
+finally {
+    conn.end()
+}

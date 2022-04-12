@@ -4,6 +4,8 @@
   "description": "LC qns mailer",
   "main": "index.js",
   "scripts": {
+    "start": "node ./app/app.js",
+    "setup": "node ./app/db/createDB.js && node ./app/db/seedDB.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

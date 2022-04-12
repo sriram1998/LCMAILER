@@ -1,16 +1,54 @@
-const sql = require("../db/db.js");
+const mysqlUtil = require("../db/mysqlUtil.js");
 
-const getProblems = (difficultyRange, concepts) => {
+const pool = mysqlUtil.pool;
+
+
+async function getProblems(difficultyRange, concepts) {
     let query = `SELECT * from problems WHERE difficulty in (?) AND concept in (?) and status = "UNSOLVED"`;
 
-    sql.query(query, [difficultyRange, concepts], (response, error) => {
-        if(error){
-            console.log("querying table failed ", error);
+    var conn = await mysqlUtil.getConnection(pool);
+
+    return new Promise((resolve, reject) => {
+        try {
+            conn.query(query, [difficultyRange, concepts], (error, response) => {
+                if (error) {
+                    console.log("querying table failed ", error);
+                    reject(error);
+                }
+                else {
+                    resolve(response);
+                }
+            })
         }
-        else{
-            console.log(response);
+
+        finally {
+            conn.release();
         }
     })
 };
 
-module.exports = {getProblems}
+async function updateStatus(id){
+    let query = `UPDATE problems SET status = "SOLVED" where id = ?`;
+
+    var conn = await mysqlUtil.getConnection(pool);
+
+    return new Promise((resolve, reject) => {
+        try{
+            conn.query(query, id, (err, response) => {
+                if(err){
+                    console.log("Update Failed ", err);
+                    reject(err);
+                }
+                else{
+                    resolve(response);
+                }
+            })
+        }
+        finally{
+            conn.release();
+        }
+    })
+
+};
+
+module.exports = { getProblems, updateStatus }
