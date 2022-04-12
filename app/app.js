@@ -2,7 +2,7 @@ const SQLservice = require("./services/SQLService.js");
 
 const mailer = require("./services/mailer.js");
 
-const config = require("./config/app.config.json");
+const config = require("../config/app.config.json");
 
 function getRandomInt(max){
     return Math.floor(Math.random() * max);

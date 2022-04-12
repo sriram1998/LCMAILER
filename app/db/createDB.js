@@ -1,5 +1,5 @@
 var mysql = require("mysql");
-var sqlConfig = require("../config/db.config");
+var sqlConfig = require("../../config/db.config");
 
 var conn = mysql.createConnection({
     host: sqlConfig.HOST,
