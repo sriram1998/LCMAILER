@@ -1,5 +1,6 @@
 {
     "concepts": ["array","string","hash-table","dynamic-programming","math","depth-first-search","sorting","greedy","breadth-first-search","tree","binary-search","matrix","binary-tree","two-pointers","bit-manipulation","stack","heap-priority-queue","graph"],
     "difficulty": ["Easy", "Medium"],
-    "DL":"sriramvenkat98@gmail.com"
+    "gmailAuth": {"address": "<your_mail>", "password": "<your_google_app_password>"},
+    "DL":"sriramvenkat98@gmail.com, aniroodh1998@gmail.com, sharabeshjayaraman@gmail.com, archana.2098@gmail.com"
 }
