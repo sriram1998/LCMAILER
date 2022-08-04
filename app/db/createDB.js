@@ -1,5 +1,11 @@
 var mysql = require("mysql");
+
+require("dotenv").config();
 var sqlConfig = require("../../config/db.config");
+
+console.log("is it building table? "+ sqlConfig.PASSWORD)
+
+
 
 var conn = mysql.createConnection({
     host: sqlConfig.HOST,
@@ -9,9 +15,9 @@ var conn = mysql.createConnection({
 });
 
 var sqlCommand = `
-CREATE DATABASE IF NOT EXISTS lcproblemset;
+CREATE DATABASE IF NOT EXISTS lcproblemsettest;
 
-USE lcproblemset;
+USE lcproblemsettest;
 
 CREATE TABLE IF NOT EXISTS problems (
     id int(11) NOT NULL auto_increment,

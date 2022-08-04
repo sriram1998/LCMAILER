@@ -2,7 +2,7 @@
 
 const nodemailer = require("nodemailer"); 
 
-const config = require("../../config/app.config.json");
+const config = require("../../config/app.config");
 
 async function sendMail(title, link, difficulty){
     let transporter = nodemailer.createTransport({
@@ -24,15 +24,11 @@ async function sendMail(title, link, difficulty){
         to: config.DL,
         subject: subject,
         html: html
-
-
     });
 
     console.log("Message sent ", info.messageId);
 
     return info.messageId;
-
-
 }
 
 module.exports = {sendMail}

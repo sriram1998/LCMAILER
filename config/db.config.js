@@ -1,6 +1,6 @@
 module.exports = {
-    HOST: "localhost",
-    USER: "root",
-    PASSWORD: "<local_mysql_password>",
-    DB: "lcproblemset"
+    HOST: process.env.DB_HOST,
+    USER: process.env.DB_USER,
+    PASSWORD: process.env.DB_ROOT_PASSWORD,
+    DB: process.env.DATABASE
 };

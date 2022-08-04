@@ -1,8 +1,12 @@
+require("dotenv").config();
+
 const SQLservice = require("./services/SQLService.js");
 
 const mailer = require("./services/mailer.js");
 
-const config = require("../config/app.config.json");
+const config = require("../config/app.config");
+
+var cron = require('node-cron')
 
 function getRandomInt(max){
     return Math.floor(Math.random() * max);
@@ -34,7 +38,12 @@ async function retrieveAndMail(){
     
 }
 
+console.log(process.env.DB_PASSWORD)
+
 retrieveAndMail();
 
+// cron.schedule('* * * * *', () => {
+//     console.log("working?");
+// });
 
 

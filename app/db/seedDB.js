@@ -2,7 +2,7 @@ const mysqlUtil = require("./mysqlUtil.js");
 const readXlsxFile = require('read-excel-file/node');
 const pool = mysqlUtil.pool;
 
-var filePath = "./resources/test.xlsx";
+var filePath = "./resources/problems.xlsx";
 
 async function insertDataIntoDB(){
     var sql = await mysqlUtil.getConnection(pool);
