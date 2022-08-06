@@ -8,13 +8,13 @@ Range of concepts from which the daily questions are chosen from can also be con
 
 Cron for scheduling mailer can also be configured.
 
-For instance the app can be configured to send only easy and medium questions from DP and Graphs everyday at a pre-configured time.
+For instance the app can be configured to send only Easy and Medium questions from DP and Graphs everyday at a pre-configured time.
 
-The setup steps will create a mysql container with a table loaded with all the LC free questions (around 5k questions).
+The setup steps will create a mysql container with a table pre-loaded with all the free LC questions (around 5k questions).
 
 Local Setup:
 - For GMAIL password an app password must be generated from google account (https://support.google.com/accounts/answer/185833?p=InvalidSecondFactor).
-- Create a .env file (refer .env-sample for required vars).
+- Create a .env file in project root (refer .env-sample for required variables).
 - Set GMAIL ID and generated app password in .env.
 - Configure required difficulty ranges, concepts and mailing list in config/app.config.js.
 - Cron is set for 10PM every day but can be configured in app.config to custom time.
