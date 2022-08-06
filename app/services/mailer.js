@@ -17,7 +17,7 @@ async function sendMail(title, link, difficulty){
     var subject = "Today's LC question: " + title + " (" + difficulty + ")";
 
 
-    var html = "<p>" + link + "</p><br/><b>Next question tomorrow at 5</b>"
+    var html = "<p>" + link + "</p><br/><b>Next question tomorrow at 10 AM</b>"
 
     let info = await transporter.sendMail({
         from: config.gmailAuth.address, 

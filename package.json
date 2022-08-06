@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./app/app.js",
-    "setup": "node ./app/db/createDB.js && node ./app/db/seedDB.js",
+    "setup": "node ./app/db/setup.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.1",
+    "log4js": "^6.6.1",
     "mysql": "^2.18.1",
     "node-cron": "^3.0.1",
     "nodemailer": "^6.7.3",

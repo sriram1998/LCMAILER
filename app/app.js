@@ -1,5 +1,3 @@
-require("dotenv").config();
-
 const SQLservice = require("./services/SQLService.js");
 
 const mailer = require("./services/mailer.js");
@@ -38,12 +36,10 @@ async function retrieveAndMail(){
     
 }
 
-console.log(process.env.DB_PASSWORD)
+// retrieveAndMail();
 
-retrieveAndMail();
-
-// cron.schedule('* * * * *', () => {
-//     console.log("working?");
-// });
+cron.schedule(config.cron, () => {
+    retrieveAndMail();
+});
 
 
