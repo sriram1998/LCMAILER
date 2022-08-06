@@ -16,9 +16,13 @@ Local Setup:
 - For GMAIL password an app password must be generated from google account (https://support.google.com/accounts/answer/185833?p=InvalidSecondFactor).
 - Create a .env file in project root (refer .env-sample for required variables).
 - Set GMAIL ID and generated app password in .env.
+
+Configuration:
 - Edit the mailing list in app.config.js to send to required mail IDs.
-- Configure required difficulty ranges and concepts in config/app.config.js.
+- Configure required difficulty ranges and concepts in config/app.config.js. Choose concepts from concepts.txt in resources folder.
 - Cron is set for 10PM every day but can be configured in app.config to custom time.
+
+Run:
 - Run docker-compose up -d to spin up the docker containers for the App and DB.
 - Mail with link of the LC question will be sent to the given list of mail IDs at configured time.
 
